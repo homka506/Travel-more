@@ -1,0 +1,73 @@
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+	background-color: #5474fd;
+	text-decoration: none;
+	color:#fff;
+	padding:15px 40px;
+	font-family: Aleo;
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+text-transform: uppercase;
+letter-spacing: 1.2px;
+	&:hover{
+
+	}
+}
+.ba-batton--blue{
+	padding-top:20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+	&:focus{
+		
+	}
+}
+.ba-search-form{
+	display: flex;
+	justify-content: center;
+}
+.ba-search-form [type="text"]{
+	color: #999999;
+    border: 0;
+    background: #F1F1F1;
+	width: 550px;
+	padding:20px 123px;
+	font-size: 14px;
+font-weight: 400;
+line-height: 26px;
+}
+.ba-search-form [type="submit"]{
+    border: 2px solid;
+    background: #5474fd;;
+	display: flex;
+	font-family: Aleo;
+	font-size: 14px;
+font-weight: 400;
+line-height: 26px;
+text-transform: uppercase;
+letter-spacing: 1.4px;
+padding: 20px;
+}
+
+textarea {
+
+}

@@ -1,0 +1,163 @@
+@import "normalize";
+@import "layout";
+@import "elements";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Aleo:400,700');
+
+body{
+font:400 14px/1.3 "Josefin Sans", sans-serif;
+color:#ffffff;
+}
+
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1100px;
+}
+.ba-main {
+	min-height: 100vh;
+	background: url(../img/bg-header.jpg) 50% no-repeat;
+	background-size: cover;
+	text-align: center;
+	padding:280px 0 0;
+	position: relative;
+}
+.ba-main_title{
+	font-size: 48px;
+font-weight: 700;
+line-height: 26px;
+text-transform: uppercase;
+letter-spacing: 4.8px;
+margin-bottom:15px;
+}
+.ba-main_subtitle{
+	font-size: 22px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 6.00px;
+margin-top:0;
+margin-bottom:42px;
+}
+.ba-scroll__item {
+	position: absolute;
+	top:582px;
+	left:955px;
+}
+.ba-scroll__itemp a{
+	text-decoration: none;
+	font-size: 14px;
+	color: #ffffff;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 2.8px;
+
+}
+.ba-scroll__item p{
+	margin-bottom:0;
+}
+header{
+	background-color: #5474fd;
+	height:80px; 
+}
+.ba-container__header {
+	display:flex;
+    justify-content:space-between;
+}
+.ba-header--list {
+	list-style: none;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.ba-choose{
+	background: url(../img/ba-choose.png) 50% no-repeat;
+	background-size: cover;
+}
+.ba-row {
+	position:relative;
+}
+.ba-col--items{
+	padding: 180px 0 132px;
+}
+.ba-col--img {
+	padding:120px 0;
+}
+.ba-choose__left{
+	padding-left:90px;
+}
+.ba-choose__right{
+	padding-left:230px;
+}
+.ba-title{
+	font-family: Aleo;
+font-size: 36px;
+font-weight: 400;
+line-height: 26px;
+}
+.ba-chose--items{
+	font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+letter-spacing: 1.6px;
+}
+.ba-choose--title {
+	padding-bottom:30px;
+}
+
+.ba-spain {
+	background: url(../img/ba-spain.jpg) 50% no-repeat;
+	background-size: cover;
+}
+.ba-row-dark {
+	background-color: #232323;
+	opacity: 0.9;
+	margin:230px  100px 330px;
+	padding:60px;
+}
+.ba-spain--title {
+	font-family:"Josefin Sans",sans-serif;
+	font-size: 20px;
+font-weight: 400;
+line-height: 26px;
+text-transform: uppercase;
+}
+.ba-spain_dark {
+	background: url(../img/ba-spain_2.jpg) 50% no-repeat;
+	background-size: cover;
+}
+.ba-row-right {
+	justify-content: flex-end;
+	margin:0;
+}
+.ba-about {
+	background: url(../img/about_us.jpg) 50% no-repeat;
+	background-size: cover;
+	
+}
+.ba-container--about {
+	display: flex;
+	padding-bottom:200px;
+
+}
+.ba-about--foto{
+	width: 50%;
+    display: flex;
+}
+.ba-about-items{
+	width: 50%;
+	background-color: #333333;
+}
+.ba-about--title {
+	padding:120px 0 94px;
+	font-family: Aleo;
+font-size: 36px;
+font-weight: 400;
+line-height: 26px;
+}
+.ba-about-items p {
+	font-family: "Josefin Sans";
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+}
