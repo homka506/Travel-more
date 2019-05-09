@@ -1,10 +1,11 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,600,700");
 @import url("https://fonts.googleapis.com/css?family=Aleo:400,700");
 html {
   font-family: sans-serif;
@@ -114,8 +115,7 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
+  font-size: 2em; }
 
 /**
  * Address styling not present in IE 8/9.
@@ -586,118 +586,169 @@ input[type="button"],
 button,
 .ba-button {
   display: inline-block;
-  background-color: #5474fd;
-  text-decoration: none;
+  font: 400 16px/60px "Aleo", sans-serif;
+  border-radius: 0;
+  background-color: #4e72f9;
+  padding: 0 38px;
+  letter-spacing: 0.075em;
   color: #fff;
-  padding: 15px 40px;
-  font-family: Aleo;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
   text-transform: uppercase;
-  letter-spacing: 1.2px; }
-
-.ba-batton--blue {
-  padding-top: 20px; }
+  min-height: 60px;
+  vertical-align: middle; }
+  input[type="submit"] svg,
+  input[type="button"] svg,
+  button svg,
+  .ba-button svg {
+    fill: currentColor; }
+  input[type="submit"]:hover,
+  input[type="button"]:hover,
+  button:hover,
+  .ba-button:hover {
+    color: #fff;
+    background-color: lighten #4e72f9, 5%; }
 
 input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
 input[type="tel"],
+input[type="search"],
 textarea,
 select {
   -webkit-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
   -o-transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
-  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in; }
+  transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+  height: 56px;
+  padding: 0 10px;
+  border: none;
+  background: #fff;
+  border-radius: 0;
+  font: 300 14px/56px "Josefin Sans", sans-serif;
+  color: #999;
+  letter-spacing: 0.2em; }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="search"]:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    -webkit-box-shadow: inset 0 0 0 2px #4e72f9;
+    box-shadow: inset 0 0 0 2px #4e72f9; }
 
-.ba-search-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
+.ba-row > [class*='ba-col-'] {
+  padding-left: 30px; }
 
-.ba-search-form [type="text"] {
-  color: #999999;
-  border: 0;
-  background: #F1F1F1;
-  width: 550px;
-  padding: 20px 123px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px; }
+.ba-row {
+  margin-left: -30px; }
 
-.ba-search-form [type="submit"] {
-  border: 2px solid;
-  background: #5474fd;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: Aleo;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 26px;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  padding: 20px; }
+.ba-hidden {
+  display: none; }
 
 body {
-  font: 400 14px/1.3 "Josefin Sans", sans-serif;
-  color: #ffffff; }
+  border: 15px solid #fff;
+  font: 300 16px/1.6 "Josefin Sans", sans-serif;
+  color: #e8e8e8; }
+
+p {
+  margin: 0 0 28px; }
+
+a {
+  color: #4e72f9;
+  text-decoration: none; }
+  a:hover, a:active {
+    color: #7f99fb; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-family: "Aleo", sans-serif;
+  line-height: 1.3; }
 
 /* Layout */
 .ba-container {
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1100px; }
+  max-width: 1150px;
+  position: relative;
+  z-index: 1; }
 
-.ba-main {
-  min-height: 100vh;
-  background: url(../img/bg-header.jpg) 50% no-repeat;
-  background-size: cover;
+.ba-intro {
+  min-height: calc(100vh - 94px);
+  background: #4e72f9 url(../img/intro-bg.jpg) 50% no-repeat/cover;
   text-align: center;
-  padding: 280px 0 0;
-  position: relative; }
+  padding: 100px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
-.ba-main_title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 26px;
+.ba-container--intro {
+  width: 100%; }
+
+.ba-page_title {
   text-transform: uppercase;
-  letter-spacing: 4.8px;
-  margin-bottom: 15px; }
+  font: 700 48px/1 "Josefin Sans", sans-serif;
+  letter-spacing: 0.07em;
+  margin: 0; }
 
-.ba-main_subtitle {
+.ba-motto {
+  margin: -1px 0 45px;
+  letter-spacing: .27em;
   font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 6.00px;
-  margin-top: 0;
-  margin-bottom: 42px; }
+  font-weight: 300; }
 
-.ba-scroll__item {
-  position: absolute;
-  top: 582px;
-  left: 955px; }
-
-.ba-scroll__itemp a {
+.ba-scroll {
+  margin-top: 116px;
+  color: #fff;
   text-decoration: none;
+  display: inline-block;
   font-size: 14px;
-  color: #ffffff;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 2.8px; }
+  letter-spacing: 0.15em; }
+  .ba-scroll img {
+    fill: currentColor;
+    display: block;
+    margin: auto;
+    width: 15px;
+    height: 15px; }
 
-.ba-scroll__item p {
-  margin-bottom: 0; }
+.ba-search {
+  max-width: 650px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding: 2px; }
+  .ba-search__input {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center; }
+  .ba-search__btn {
+    min-height: 56px;
+    line-height: 56px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding: 0 14px 0 34px; }
+    .ba-search__btn img {
+      fill: currentColor;
+      margin-left: 7px;
+      display: inline-block;
+      vertical-align: middle; }
 
-header {
-  background-color: #5474fd;
-  height: 80px; }
+.ba-header {
+  background: #4e72f9; }
 
-.ba-container__header {
+.ba-header--bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -705,110 +756,168 @@ header {
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
-.ba-header--list {
-  list-style: none;
+.ba-logo {
+  color: #fff;
+  text-transform: uppercase;
+  font: 600 24px/82px "Josefin Sans", sans-serif;
+  letter-spacing: 0.08em;
+  height: 80px; }
+  .ba-logo:hover, .ba-logo:focus {
+    color: #98adfc; }
+
+.ba-main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .ba-main-nav li {
+    line-height: 80px;
+    color: #fff; }
+    .ba-main-nav li:not(:first-child) {
+      padding-left: 42px; }
+  .ba-main-nav a {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    font: 400 14px/1 "Aleo", sans-serif; }
+    .ba-main-nav a:hover, .ba-main-nav a:focus {
+      color: #98adfc; }
 
-.ba-choose {
-  background: url(../img/ba-choose.png) 50% no-repeat;
-  background-size: cover; }
-
-.ba-row {
-  position: relative; }
-
-.ba-col--items {
-  padding: 180px 0 132px; }
-
-.ba-col--img {
+.ba-about {
+  background: url(../img/sky.png) 50% no-repeat;
+  /*не работает*/
   padding: 120px 0; }
+  .ba-about__content {
+    padding-top: 75px; }
+  .ba-about p {
+    letter-spacing: 0.065em; }
 
-.ba-choose__left {
-  padding-left: 90px; }
-
-.ba-choose__right {
-  padding-left: 230px; }
-
-.ba-title {
-  font-family: Aleo;
+.ba-section-title, .ba-service__title {
   font-size: 36px;
   font-weight: 400;
-  line-height: 26px; }
+  font-family: "Aleo", sans-serif;
+  margin-bottom: 55px; }
 
-.ba-chose--items {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  letter-spacing: 1.6px; }
+.ba-travel:before {
+  content: none; }
 
-.ba-choose--title {
-  padding-bottom: 30px; }
+.ba-button--more {
+  margin-top: 16px; }
 
-.ba-spain {
-  background: url(../img/ba-spain.jpg) 50% no-repeat;
-  background-size: cover; }
+.ba-imeges-gride {
+  padding-left: 65px; }
+  .ba-imeges-gride img {
+    float: left; }
+    .ba-imeges-gride img + img {
+      margin-top: 5px; }
+  .ba-imeges-gride :nth-child(2n) {
+    float: right; }
 
-.ba-row-dark {
-  background-color: #232323;
-  opacity: 0.9;
-  margin: 230px  100px 330px;
-  padding: 60px; }
+.ba-services {
+  padding: 80px 0 110px;
+  background: #363636 url(../img/shape_1.svg) no-repeat 50% 45px;
+  /*не работает*/ }
+  .ba-services__before {
+    content: none; }
 
-.ba-spain--title {
-  font-family: "Josefin Sans",sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 26px;
-  text-transform: uppercase; }
+.ba-service {
+  text-align: center; }
+  .ba-service__title {
+    margin: 4px 0 0; }
+  .ba-service__icon {
+    border-radius: 50%;
+    padding: 20px;
+    width: 96px;
+    height: 96px;
+    background: #282828;
+    display: inline-block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
-.ba-spain_dark {
-  background: url(../img/ba-spain_2.jpg) 50% no-repeat;
-  background-size: cover; }
+.ba-offer-row {
+  background-size: cover;
+  background-position: 50%;
+  padding: 229px 0 103px; }
 
 .ba-row-right {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
-  margin: 0; }
+  justify-content: flex-end; }
 
-.ba-about {
-  background: url(../img/about_us.jpg) 50% no-repeat;
-  background-size: cover; }
+.ba-offer {
+  background: rgba(54, 54, 54, 0.9);
+  padding: 48px 30px; }
+  .ba-offer__country, .ba-offer__title {
+    letter-spacing: 0.02em;
+    font: 300 20px/1.2 "Josefin Sans", sans-serif;
+    margin: 0 0 24px; }
+  .ba-offer__title {
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
 
-.ba-container--about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 200px; }
+.ba-button--offer {
+  margin-top: 16px;
+  padding: 0 62px; }
 
-.ba-about--foto {
-  width: 50%;
+.ba-testimonial {
+  padding: 110px 0 200px; }
+
+.ba-testimonial-slider {
+  margin-top: 80px; }
+
+.ba-testimonial-slide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .ba-testimonial-slide__title {
+    font: 300 20px/1 "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 42px; }
+  .ba-testimonial-slide__image {
+    width: 40%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+    .ba-testimonial-slide__imageimg {
+      display: block; }
+  .ba-testimonial-slide__body {
+    background: #363636;
+    padding: 60px 50px 40px 60px;
+    letter-spacing: -0.1em; }
+    .ba-testimonial-slide__body blockquote {
+      padding: 0;
+      margin: 0; }
+    .ba-testimonial-slide__body p {
+      margin: 0; }
 
-.ba-about-items {
-  width: 50%;
-  background-color: #333333; }
+.ba-footer {
+  background: #282828;
+  color: #fff;
+  padding: 120px 0 44px; }
 
-.ba-about--title {
-  padding: 120px 0 94px;
-  font-family: Aleo;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 26px; }
+.ba-page_title--footer {
+  font-size: 24px; }
 
-.ba-about-items p {
-  font-family: "Josefin Sans";
+.ba-motto--footer {
   font-size: 16px;
-  font-weight: 400;
-  line-height: 26px; }
+  letter-spacing: 0.06em;
+  margin: 6px 0 22px; }
+
+.ba-socials a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  margin: 0 9px; }
+  .ba-socials a:hover, .ba-socials a:focus {
+    color: #4e72f9; }
+  .ba-socials a svg {
+    display: block;
+    fill: currentColor;
+    width: 16px;
+    height: 16px; }
 
 /*# sourceMappingURL=style.css.map */
